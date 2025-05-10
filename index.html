@@ -17,7 +17,7 @@
         body {
             min-height: 100vh;
             background: #000;
-            overflow: hidden;
+            overflow-x: hidden;
             position: relative;
             color: #0f0;
         }
@@ -46,6 +46,9 @@
             border: 1px solid #0f0;
             box-shadow: 0 0 30px rgba(0, 255, 0, 0.3);
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         /* Kichwa */
@@ -55,7 +58,7 @@
         }
 
         header h1 {
-            font-size: 2em;
+            font-size: 2.5em;
             text-shadow: 0 0 10px #0f0;
             animation: glitch 1s infinite;
             word-wrap: break-word;
@@ -134,7 +137,7 @@
         }
         
         .table-class {
-            width: 100%;
+            width: auto;
         }
         
         @media (max-width: 760) {
@@ -146,10 +149,6 @@
             .table-class tr {
                 display: flex;
                 flex-direction: column;
-            }
-            
-            .table-container {
-                overflow-x: auto;
             }
         }
     </style>
@@ -163,10 +162,6 @@
         <source src="Just A Lil Bit(MP3_160K).mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
-    
-    <div class="table-container">
-        <table>...</table>
-    </div>
 
     <div id="music-player">
         <button onclick="toggleMusic()" style="background: #000; border: 1px solid #0f0; color: #0f0; padding: 5px 10px;">
