@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker Portal | Social Links</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Staili za Msingi */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', monospace;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #000;
+            overflow: hidden;
+            position: relative;
+            color: #0f0;
+        }
+
+        /* Matrix Background */
+        .matrix {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.3;
+        }
+
+        /* Container kuu */
+        .container {
+            position: relative;
+            z-index: 1;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px;
+            background: rgba(0, 20, 0, 0.8);
+            border: 1px solid #0f0;
+            box-shadow: 0 0 30px rgba(0, 255, 0, 0.3);
+            text-align: center;
+        }
+
+        /* Kichwa */
+        header {
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        header h1 {
+            font-size: 2em;
+            text-shadow: 0 0 10px #0f0;
+            animation: glitch 1s infinite;
+            word-wrap: break-word;
+            max-width: 100%;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5rem;
+                line-height: 1.2;
+            }
+        }
+
+        /* Social Links */
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .social-link {
+            padding: 15px;
+            border: 2px solid #0f0;
+            border-radius: 5px;
+            color: #0f0;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            background: rgba(0, 30, 0, 0.5);
+        }
+
+        .social-link:hover {
+            background: #0f0;
+            color: #000;
+            box-shadow: 0 0 20px #0f0;
+            transform: scale(1.1);
+        }
+
+        .social-link i {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        /* Animations */
+        @keyframes glitch {
+            0% { text-shadow: 0 0 10px #0f0; }
+            50% { text-shadow: -5px 0 15px #f00, 5px 0 15px #00f; }
+            100% { text-shadow: 0 0 10px #0f0; }
+        }
+
+        /* Terminal Effect */
+        .terminal {
+            border: 2px solid #0f0;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: left;
+            background: #000;
+            height: 200px;
+            overflow-y: auto;
+        }
+
+        .terminal::before {
+            content: "root@hacker:~$ ";
+            color: #0f0;
+        }
+
+        /* Muziki Controller */
+        #music-player {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            color: #0f0;
+            z-index: 100;
+        }
+        
+        .table-class {
+            width: 100%;
+        }
+        
+        @media (max-width: 760) {
+            .table-class {
+                font-size: 14px;
+                overflow-x: auto;
+            }
+            
+            .table-class tr {
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .table-container {
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Matrix Background -->
+    <canvas class="matrix" id="matrix"></canvas>
+
+    <!-- Muziki -->
+    <audio id="bg-music" autoplay loop>
+        <source src="Just A Lil Bit(MP3_160K).mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <div class="table-container">
+        <table>...</table>
+    </div>
+
+    <div id="music-player">
+        <button onclick="toggleMusic()" style="background: #000; border: 1px solid #0f0; color: #0f0; padding: 5px 10px;">
+            <i class="fas fa-music"></i> 
+            <span id="music-status">Play</span>
+        </button>
+    </div>
+
+    <!-- Content -->
+    <div class="container">
+        <header>
+            <h1>Cyber_Protocol_v1.3.37</h1>
+            <p>|| Access Granted || Security Bypassed ||</p>
+        </header>
+
+        <div class="terminal">
+            <p>KARIBU...</p>
+            <p>Asante kwa kuchagua Anonmad-Network</p>
+            <p>Initializing system protocols...</p>
+            <p>Encryption: AES-256 Activated</p>
+            <p>Firewall: Stealth Mode Enabled</p>
+            <p>Social Engineering Module: Online</p>
+        </div>
+
+        <div class="social-grid">
+            <a href="https://github.com/Anonmad" class="social-link">
+                <i class="fab fa-github"></i>
+                <div>GitHub</div>
+            </a>
+            <a href="https://whatsapp.com/biz/" class="social-link">
+                <i class="fab fa-hackerrank"></i>
+                <div>DM Me</div>
+            </a>
+            <a href="https://www.linkedin.com/in/ezekiel-anderson-evarist-734098362" class="social-link">
+                <i class="fab fa-linkedin"></i>
+                <div>LinkedIn</div>
+            </a>
+            <a href="https://t.me/addlist/kmMW8Emuw9YzNTM0" class="social-link">
+                <i class="fab fa-telegram"></i>
+                <div>Telegram</div>
+            </a>
+            <a href="https://www.tiktok.com/@mrcholo.tz" class="social-link">
+                <i class="fab fa-tiktok"></i>
+                <div>TikTok</div>
+            </a>
+            <a href="https://whatsapp.com/channel/0029VavbyFZ5Ui2gQ0nN7y1Q" class="social-link">
+                <i class="fab fa-whatsapp"></i>
+                <div>WhatsApp</div>
+            </a>
+        </div>
+
+        <footer style="margin-top: 30px;">
+            <p style="font-size: 0.8em;"></p>
+        </footer>
+    </div>
+
+    <script>
+        // Matrix Effect
+        const canvas = document.getElementById('matrix');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()';
+        const drops = Array(Math.floor(canvas.width / 10)).fill(1);
+
+        function drawMatrix() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            ctx.fillStyle = '#0f0';
+            ctx.font = '15px monospace';
+
+            drops.forEach((drop, i) => {
+                const text = chars[Math.floor(Math.random() * chars.length)];
+                ctx.fillText(text, i * 10, drop * 10);
+                
+                if (drop * 10 > canvas.height && Math.random() > 0.975) drops[i] = 0;
+                drops[i]++;
+            });
+        }
+
+        setInterval(drawMatrix, 50);
+
+        // Muziki Control
+        const music = document.getElementById('bg-music');
+        function toggleMusic() {
+            music.paused ? music.play() : music.pause();
+            document.getElementById('music-status').textContent = music.paused ? 'Play' : 'Pause';
+        }
+
+        // Terminal Effect
+        const terminal = document.querySelector('.terminal');
+        const commands = [
+            'KARIBU SANA MWANA FAMILIA...',
+            'Asante kwa kuchagua Anonmad N...',
+            'sudo apt-get update',
+            'Initializing security protocols...',
+            'Scanning network...',
+            'Accessing dark web...',
+            'Brute force attack initialized...',
+            'Root access obtained!',
+            'Karibu sana kwenye ukurasa wetu huu...',
+            'Bonyeza links hizo hapo chini...',
+            'Ili ikupeleke mahara husika...',
+            'Asante sana kwa kuchagua Anonmad network!'
+        ];
+
+        let index = 0;
+        setInterval(() => {
+            terminal.innerHTML += `<p>${commands[index]}</p>`;
+            terminal.scrollTop = terminal.scrollHeight;
+            index = (index + 1) % commands.length;
+        }, 3000);
+
+        // Ongeza ufanisi wa hover
+        document.querySelectorAll('.social-link').forEach(link => {
+            link.addEventListener('mouseover', () => {
+                link.style.transform = 'rotate(' + (Math.random() * 4 - 2) + 'deg)';
+            });
+        });
+    </script>
+</body>
+</html>
